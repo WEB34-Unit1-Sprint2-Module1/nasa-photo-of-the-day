@@ -12,7 +12,7 @@ function DayPhoto() {
     axios.get('https://api.nasa.gov/planetary/apod?api_key=dA0WZJwegrMiHJToOmY4zEyPnrZUojzwJfGVaPXY&date=2012-03-14').then(response => {
       console.log(response.data);
       setPhoto(response.data)
-    })
+    }).catch(error => console.log(`There was an error: ${error}`));
   }, [])
   
 
